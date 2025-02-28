@@ -1,0 +1,47 @@
+.navbar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1rem;
+    border-radius: .5rem;
+    background-color: hsl(0, 0%, 92%);
+    box-shadow: rgba(17, 17, 26, 0.1) 0px .5em .5em;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    font-size: 2.5rem;
+    gap: .2rem;
+}
+
+.logo img {
+    width: 1.5rem;
+}
+
+.logo span {
+    height: .85rem;
+    font-weight: 300;
+}
+
+.mainLinks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cart {
+    display: flex;
+    justify-content: end;
+}
+
+.link {
+    text-decoration: none;
+    color: hsl(13, 10%, 17%);
+    transition: all 200ms ease-in-out;
+}
+
+.link:hover {
+    color: hsl(45, 77%, 50%);
+    cursor: pointer;
+}
