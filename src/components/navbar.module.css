@@ -1,10 +1,14 @@
-.navbar {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+.header{
+    text-align: center;
+}
+
+.wrapper {
+    margin: 0 auto;
     padding: 1rem;
     border-radius: .5rem;
     background-color: hsl(0, 0%, 92%);
     box-shadow: rgba(17, 17, 26, 0.1) 0px .5em .5em;
+    position: relative;
 }
 
 .logo{
@@ -23,25 +27,120 @@
     font-weight: 300;
 }
 
-.mainLinks {
+.navToggle {
+    cursor: pointer;
+    border: 0;
+    font-size: 1.5rem;
+    line-height: 0;
+    background-color: transparent;
+    color: hsl(13, 10%, 17%);
+    transition: all 250ms ease;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0;
+}
+
+.navToggle:focus,
+.navToggle:hover {
+    color: hsl(45, 77%, 50%);
+}
+
+.nav {
+    height: 0;
+    visibility: hidden;
+    position: absolute;
+}
+
+.navList {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: .9rem;
+}
+
+.navListPrimary {
+    margin-bottom: 3em;
+}
+
+.navItem {
+    margin-top: .75em;
+}
+
+.navLink {
+    color: hsl(13, 10%, 17%);
+    text-decoration: none;
+    transition: all 250ms ease-in-out;
+}
+
+.navLink:hover,
+.navLink:focus {
+    color: hsl(45, 77%, 50%);
+}
+
+.cartIcon {
+    position: relative;
+}
+
+.quantityCount {
+    width: 1.25rem;
+    height: 1.25rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    background-color: hsl(45, 77%, 50%);
+    color: hsl(0, 0%, 92%);
+    border-radius: 50%;
+    position: absolute;
+    right: -.8rem;
+    bottom: -.5rem;
 }
 
-.cart {
-    display: flex;
-    justify-content: end;
-}
+.navVisible {
+    visibility: visible;
+    height: auto;
+    position: relative;
+} 
 
-.link {
-    text-decoration: none;
-    color: hsl(13, 10%, 17%);
-    transition: all 200ms ease-in-out;
-}
+@media (min-width: 800px) {
 
-.link:hover {
-    color: hsl(45, 77%, 50%);
-    cursor: pointer;
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .navToggle {
+        display: none;
+    }
+
+    .nav {
+        display: flex;
+        flex-grow: 1;
+        justify-content: space-between;
+        align-items: center;
+        visibility: visible;
+        height: auto;
+        gap: 1em;
+        position: relative;
+    }
+
+    .navList {
+        display: flex;
+        gap: 1em;
+        font-size: 1.5rem;
+    }
+
+    .navItem {
+        margin: 0;
+    }
+
+    .navListPrimary {
+        margin: 0 auto;
+    }
+
+    .quantityCount {
+        font-size: 1rem;
+        right: -.6rem;
+        bottom: -.1rem;
+    }
 }

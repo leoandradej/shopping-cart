@@ -1,0 +1,108 @@
+.card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.card img {
+    width: 100%;
+    height: 15rem;
+    object-fit: cover;
+    margin: 0 auto;
+    border-radius: .5rem;
+}
+
+.cardBody {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cardBody span {
+    font-size: 1.25rem;
+}
+
+.cardTitle {
+    width: 60%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cardTitle:hover {
+    overflow: visible;
+}
+
+.btn {
+    font-family: inherit;
+    border: .2rem solid hsl(45, 60%, 50%);
+    border-radius: .5rem;
+    color: hsl(48, 100%, 99%);
+    background-color: hsl(45, 77%, 50%);
+    padding: .5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+}
+
+.btn:hover {
+    background-color: hsl(45, 60%, 50%);
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.quantityControls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .5rem;
+    padding: 0;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    line-height: .5rem;
+}
+
+.controlBtn {
+    font-family: inherit;
+    font-size: 2rem;
+    line-height: 2rem;
+    border-radius: .5rem;
+    background-color: hsl(48, 100%, 99%);
+    color: hsl(13, 10%, 17%);
+    border: none;
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+}
+
+.controlBtn:hover{
+    background-color: hsl(48, 100%, 99%);
+    color: hsl(45, 77%, 50%);
+}
+
+.quantity {
+    padding: .5rem;
+    border-right: .1rem solid hsl(45, 77%, 50%);
+    border-left: .1rem solid hsl(45, 77%, 50%);
+}
+
+.deleteItemBtn {
+    background-color: hsl(48, 100%, 99%);
+    border: none;
+    font-size: 1.25rem;
+    cursor: pointer;
+    position: absolute;
+    top: .3rem;
+    right: 0;
+    transition: all 200ms ease-in-out;
+}
+
+.deleteItemBtn:hover {
+    color: hsl(45, 77%, 50%);
+}
+

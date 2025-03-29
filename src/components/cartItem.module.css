@@ -1,0 +1,109 @@
+.heading {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr repeat(2, 1fr);
+    justify-items: center;
+    padding: 0 1rem;
+}
+
+h3:first-of-type {
+    justify-self: start;
+}
+
+.wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr repeat(2, 1fr);
+    align-items: center;
+    justify-items: center;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.cartItem {
+    width: 100%;
+}
+
+.product {
+    display: flex;
+    gap: 1rem;
+}
+
+.productImg {
+    width: 10rem;
+    height: 10rem;
+    border-radius: .5rem;
+}
+
+.productDescription {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.quantityControls {
+    width: fit-content;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .5rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    line-height: .5rem;
+}
+
+.controlBtn {
+    font-family: inherit;
+    font-size: 2rem;
+    line-height: 2rem;
+    border-radius: .5rem;
+    background-color: hsl(48, 100%, 99%);
+    color: hsl(13, 10%, 17%);
+    border: none;
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+}
+
+.controlBtn:hover{
+    background-color: hsl(48, 100%, 99%);
+    color: hsl(45, 77%, 50%);
+}
+
+.quantity {
+    padding: .5rem;
+    border-right: .1rem solid hsl(45, 77%, 50%);
+    border-left: .1rem solid hsl(45, 77%, 50%);
+}
+
+.subtotal {
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.deleteItemBtn {
+    background-color: hsl(48, 100%, 99%);
+    border: none;
+    font-size: 1.25rem;
+    cursor: pointer;
+    position: absolute;
+    top: -.1rem;
+    right: -.5rem;
+    transition: all 200ms ease-in-out;
+}
+
+.deleteItemBtn:hover {
+    color: hsl(45, 77%, 50%);
+}
+
+.total {
+    width: 100%;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: end;
+    padding: 2rem 1rem;
+    border-top: .125rem solid hsl(13, 10%, 17%);
+}

@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "name": "Yellow Chair",
+        "price": 169.00,
+        "imgUrl": "/images/img01.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Coffee Table Duo",
+        "price": 385.00,
+        "imgUrl": "/images/img02.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Dinner Table",
+        "price": 1250.00,
+        "imgUrl": "/images/img03.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Rustic Coffee Table",
+        "price": 255.00,
+        "imgUrl": "/images/img04.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Cupboard",
+        "price": 279.00,
+        "imgUrl": "/images/img05.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Full Length Mirror",
+        "price": 185.00,
+        "imgUrl": "/images/img06.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Organic Mirror",
+        "price": 159.00,
+        "imgUrl": "/images/img07.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Cage Chair",
+        "price": 289.00,
+        "imgUrl": "/images/img08.jpg"
+    },
+    {
+        "id": 9,
+        "name": "Sideboard",
+        "price": 759.00,
+        "imgUrl": "/images/img09.jpg"
+    }
+]
