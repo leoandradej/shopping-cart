@@ -7,7 +7,7 @@ const Brand = () => {
       <main>
         <h1>Brand</h1>
         <img 
-          src="/images/hero.jpg"
+          src="/shopping-cart/images/hero.jpg"
           alt="main image"
           style={{ 
             width: "100%",

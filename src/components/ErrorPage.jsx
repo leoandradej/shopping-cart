@@ -7,7 +7,7 @@ const ErrorPage = () => {
       <Navbar />
       <main>
         <h1>PAGE NOT FOUND!</h1>
-        <NavLink to={"/"} className="navLink">Return to Home</NavLink>
+        <NavLink to={"/shopping-cart"} className="navLink">Return to Home</NavLink>
       </main>
     </>
   )
