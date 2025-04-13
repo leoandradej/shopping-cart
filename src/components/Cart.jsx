@@ -17,7 +17,7 @@ const Cart = () => {
         {cartItems.length === 0 ?
           <>
             <h2>There are no items in your cart.</h2>
-            <NavLink to={"/store"} className="navLink">Continue shopping</NavLink>
+            <NavLink to={"shopping-cart/store"} className="navLink">Continue shopping</NavLink>
           </> 
         : 
           <>

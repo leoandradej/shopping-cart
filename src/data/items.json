@@ -3,63 +3,63 @@
         "id": 1,
         "name": "Yellow Chair",
         "price": 169.00,
-        "imgUrl": "/images/img01.jpg",
+        "imgUrl": "shopping-cart/images/img01.jpg",
         "description": "Inject a vibrant touch of modern elegance with this striking yellow armchair. Its clean lines and sunny hue make it a cheerful and sophisticated addition to the room."
     },
     {
         "id": 2,
         "name": "Coffee Table Duo",
         "price": 385.00,
-        "imgUrl": "/images/img02.jpg",
+        "imgUrl": "shopping-cart/images/img02.jpg",
         "description": "Bring a touch of natural simplicity to your living area with this set of light wood coffee tables. Their organic shapes and warm tones create a relaxed and inviting atmosphere."
     },
     {
         "id": 3,
         "name": "Dinner Table",
         "price": 1250.00,
-        "imgUrl": "/images/img03.jpg",
+        "imgUrl": "shopping-cart/images/img03.jpg",
         "description": "Featuring a modern design with a crisp white tabletop and contrasting wooden legs, this dining table is a stylish centerpiece for contemporary dining."
     },
     {
         "id": 4,
         "name": "Rustic Coffee Table",
         "price": 255.00,
-        "imgUrl": "/images/img04.jpg",
+        "imgUrl": "shopping-cart/images/img04.jpg",
         "description": "This distinctive wooden coffee table features a textured, open-block design, adding a touch of rustic charm and visual interest to the living space."
     },
     {
         "id": 5,
         "name": "Cupboard",
         "price": 279.00,
-        "imgUrl": "/images/img05.jpg",
+        "imgUrl": "shopping-cart/images/img05.jpg",
         "description": "This sleek light wood cupboard offers a blend of minimalist design and practical storage, adding a touch of understated modern elegance to the space."
     },
     {
         "id": 6,
         "name": "Full Length Mirror",
         "price": 185.00,
-        "imgUrl": "/images/img06.jpg",
+        "imgUrl": "shopping-cart/images/img06.jpg",
         "description": "With its minimalist wooden frame, this full-length standing mirror adds a touch of understated elegance and functionality to the bedroom."
     },
     {
         "id": 7,
         "name": "Organic Mirror",
         "price": 159.00,
-        "imgUrl": "/images/img07.jpg",
+        "imgUrl": "shopping-cart/images/img07.jpg",
         "description": "This striking mirror features a fluid, organic shape framed in warm wood, adding a touch of natural artistry and visual interest to the wall."
     },
     {
         "id": 8,
         "name": "Cage Chair",
         "price": 289.00,
-        "imgUrl": "/images/img08.jpg",
+        "imgUrl": "shopping-cart/images/img08.jpg",
         "description": "Crafted with a distinctive string and wood framework, this armchair provides both visual interest and a light, open feel with plush cushions for comfort."
     },
     {
         "id": 9,
         "name": "Sideboard",
         "price": 759.00,
-        "imgUrl": "/images/img09.jpg",
+        "imgUrl": "shopping-cart/images/img09.jpg",
         "description": "With its light wood and woven rattan elements, this sideboard brings a relaxed bohemian or coastal feel to the room while offering practical storage solutions."
     }
 ]
