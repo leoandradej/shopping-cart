@@ -15,12 +15,12 @@ const CartItem = ({ id, quantity }) => {
 
     return (
         <>
-            <div className={styles.wrapper}>
+            <div className={styles.productWrapper}>
                 <div className={styles.cartItem}>
                     <div className={styles.product}>
                         <img src={item.imgUrl} alt="" className={styles.productImg} />
                         <div className={styles.productDescription}>
-                            <span>{item.name}</span>
+                            <h3 className={styles.productName}>{item.name}</h3>
                             <span>{formatCurrency(item.price)}</span>
                         </div>
                     </div>
@@ -32,10 +32,10 @@ const CartItem = ({ id, quantity }) => {
                 </div>
                 <div className={styles.subtotal}>
                     <span className={styles.subtotalValue}>{formatCurrency(item.price * quantity)}</span>
-                    <button className={styles.deleteItemBtn} onClick={() => removeFromCart(id)}>
-                        <i className="fa-solid fa-trash-can"></i>
-                    </button>
                 </div>
+                <button className={styles.deleteItemBtn} onClick={() => removeFromCart(id)}>
+                    <i className="fa-solid fa-trash-can"></i>
+                </button>
             </div>
         </>
     )

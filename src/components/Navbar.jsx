@@ -1,41 +1,38 @@
 import { NavLink } from "react-router-dom"
 import styles from "./navbar.module.css"
 import { useShoppingCart } from "../context/ShoppingCartContext"
+import { useState } from "react"
 
 const Navbar = () => {
     const { cartQuantity } = useShoppingCart()
+    const [isActive, setIsActive] = useState(false);
+
     return (
         <header className={styles.header}>
-            <div className={styles.wrapper}>
-                <NavLink className={`${styles.logo} ${styles.navLink}`} to={"/"}>
+            <nav className={styles.nav}>
+                <NavLink className={`${styles.logo} navLink`} to={"/"}>
                     <img src="/images/logo.png" alt="logo" />
                     <span>FURNIST</span>
                 </NavLink>
-                <button className={styles.navToggle}>
+                <ul className={isActive ? `${styles.navList} ${styles.open}` : styles.navList}>
+                    <li className={styles.navItem}>
+                        <NavLink to={"/"} className="navLink">Home</NavLink>
+                    </li>
+                    <li className={styles.navItem}>
+                        <NavLink to={"/store"} className="navLink">Shop</NavLink>
+                    </li>
+                    <li className={styles.navItem}>
+                        <NavLink to={"/brand"} className="navLink">Brand</NavLink>
+                    </li>
+                </ul>
+                <button onClick={() => setIsActive(prev => !prev)} className={styles.navMenu}>
                     <i className={`${styles.hamburger} fa-solid fa-bars`}></i>
                 </button>
-                <nav className={`${styles.nav} ${styles.navVisible}`}>
-                    <ul className={`${styles.navList} ${styles.navListPrimary}`}>
-                        <li className={styles.navItem}>
-                            <NavLink to={"/"} className={styles.navLink}>Home</NavLink>
-                        </li>
-                        <li className={styles.navItem}>
-                            <NavLink to={"/store"} className={styles.navLink}>Shop</NavLink>
-                        </li>
-                        <li className={styles.navItem}>
-                            <NavLink to={"/brand"} className={styles.navLink}>Brand</NavLink>
-                        </li>
-                    </ul>
-                    <ul className={`${styles.navList} ${styles.navListSecondary}`}>
-                        <li className={styles.navItem}>
-                            <NavLink to={"/cart"} className={`${styles.navLink} ${styles.cartIcon}`}>
-                                <i className="fa-solid fa-cart-shopping"></i>
-                                {cartQuantity > 0 && (<span className={styles.quantityCount}>{cartQuantity}</span>)}
-                            </NavLink>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
+                <NavLink to={"/cart"} className={`navLink ${styles.cartIcon}`}>
+                    <i className="fa-solid fa-cart-shopping"></i>
+                    {cartQuantity > 0 && (<span className={styles.quantityCount}>{cartQuantity}</span>)}
+                </NavLink>
+            </nav>
         </header>
     )
 }

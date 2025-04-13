@@ -1,25 +1,22 @@
 .heading {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 2fr repeat(2, 1fr);
-    justify-items: center;
-    padding: 0 1rem;
+    display: none;
 }
 
 h3:first-of-type {
     justify-self: start;
 }
 
-.wrapper {
+.productWrapper {
     width: 100%;
-    display: grid;
-    grid-template-columns: 2fr repeat(2, 1fr);
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-items: center;
-    padding: 1rem;
-    margin-bottom: 1rem;
+    gap: 1rem;
+    position: relative;
+    padding: .5rem;
     border-radius: 1rem;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    font-size: clamp(1rem, 0.8571rem + 0.7143vw, 1.5rem);
 }
 
 .cartItem {
@@ -37,11 +34,15 @@ h3:first-of-type {
     border-radius: .5rem;
 }
 
+.productName {
+    padding: 0;
+}
+
 .productDescription {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
     justify-content: center;
+    gap: 1rem;
 }
 
 .quantityControls {
@@ -80,18 +81,18 @@ h3:first-of-type {
 
 .subtotal {
     width: 100%;
-    text-align: center;
+    text-align: end;
     position: relative;
 }
 
 .deleteItemBtn {
     background-color: hsl(48, 100%, 99%);
     border: none;
-    font-size: 1.25rem;
+    font-size: 1rem;
     cursor: pointer;
     position: absolute;
-    top: -.1rem;
-    right: -.5rem;
+    top: .35rem;
+    right: .1rem;
     transition: all 200ms ease-in-out;
 }
 
@@ -101,9 +102,41 @@ h3:first-of-type {
 
 .total {
     width: 100%;
-    font-size: 2rem;
+    font-size: clamp(1.75rem, 1.3571rem + 1.9643vw, 3.125rem);
     font-weight: 600;
     text-align: end;
-    padding: 2rem 1rem;
+    padding: 2rem 0;
     border-top: .125rem solid hsl(13, 10%, 17%);
+}
+
+@media (min-width: 768px) {
+    .heading {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 2fr repeat(2, 1fr);
+        justify-items: center;
+        padding: 0 1rem;
+    }
+
+    .productWrapper {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 2fr repeat(2, 1fr);
+        align-items: center;
+        justify-items: center;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        border-radius: 1rem;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    }
+
+    .subtotal {
+        text-align: center;
+    }
+
+    .deleteItemBtn {
+        font-size: 1.25rem;
+        top: .85rem;
+        right: .5rem;
+    }
 }

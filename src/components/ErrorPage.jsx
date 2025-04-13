@@ -1,6 +1,15 @@
+import { NavLink } from "react-router-dom"
+import Navbar from "./Navbar"
+
 const ErrorPage = () => {
   return (
-    <h1>ErrorPage</h1>
+    <>
+      <Navbar />
+      <main>
+        <h1>PAGE NOT FOUND!</h1>
+        <NavLink to={"/"} className="navLink">Return to Home</NavLink>
+      </main>
+    </>
   )
 }
 

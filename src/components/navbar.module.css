@@ -1,9 +1,4 @@
-.header{
-    text-align: center;
-}
-
-.wrapper {
-    margin: 0 auto;
+.header {
     padding: 1rem;
     border-radius: .5rem;
     background-color: hsl(0, 0%, 92%);
@@ -11,7 +6,18 @@
     position: relative;
 }
 
+.nav {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 1fr);
+    grid-template-areas:
+        "logo menuIcon cartIcon"
+        "menuLinks menuLinks menuLinks"
+    ;
+    align-items: center;
+}
+
 .logo{
+    grid-area: logo;
     display: flex;
     align-items: center;
     font-size: 2.5rem;
@@ -27,17 +33,14 @@
     font-weight: 300;
 }
 
-.navToggle {
+.navMenu {
+    grid-area: menuIcon;
+    justify-self: end;
     cursor: pointer;
     border: 0;
-    font-size: 1.5rem;
-    line-height: 0;
     background-color: transparent;
     color: hsl(13, 10%, 17%);
     transition: all 250ms ease;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
     padding: 0;
 }
 
@@ -46,45 +49,29 @@
     color: hsl(45, 77%, 50%);
 }
 
-.nav {
-    height: 0;
-    visibility: hidden;
-    position: absolute;
-}
-
 .navList {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    font-size: .9rem;
+    grid-area: menuLinks;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem; 
+    padding-top: 1rem;
 }
 
-.navListPrimary {
-    margin-bottom: 3em;
-}
-
-.navItem {
-    margin-top: .75em;
-}
-
-.navLink {
-    color: hsl(13, 10%, 17%);
-    text-decoration: none;
-    transition: all 250ms ease-in-out;
-}
-
-.navLink:hover,
-.navLink:focus {
-    color: hsl(45, 77%, 50%);
+.navList.open {
+    display: flex;
 }
 
 .cartIcon {
+    grid-area: cartIcon;
+    font-size: 1.5rem;
+    justify-self: end;
     position: relative;
 }
 
 .quantityCount {
-    width: 1.25rem;
-    height: 1.25rem;
+    width: 1.1rem;
+    height: 1.1rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -92,50 +79,35 @@
     color: hsl(0, 0%, 92%);
     border-radius: 50%;
     position: absolute;
-    right: -.8rem;
-    bottom: -.5rem;
+    right: -.4rem;
+    bottom: -.3rem;
+    font-size: 1rem;
+    padding-top: .1rem;
 }
 
-.navVisible {
-    visibility: visible;
-    height: auto;
-    position: relative;
-} 
-
-@media (min-width: 800px) {
-
-    .wrapper {
-        display: flex;
-        justify-content: space-between;
-    }
-    
-    .navToggle {
+@media (min-width: 768px) {
+    .navMenu {
         display: none;
     }
 
     .nav {
-        display: flex;
-        flex-grow: 1;
-        justify-content: space-between;
-        align-items: center;
-        visibility: visible;
-        height: auto;
-        gap: 1em;
-        position: relative;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-areas:
+            "logo menuLinks cartIcon"
+        ;
     }
 
     .navList {
         display: flex;
-        gap: 1em;
+        flex-direction: row;
+        justify-content: center;
+        padding-top: 0;
         font-size: 1.5rem;
+        gap: 2rem;
     }
 
     .navItem {
         margin: 0;
-    }
-
-    .navListPrimary {
-        margin: 0 auto;
     }
 
     .quantityCount {

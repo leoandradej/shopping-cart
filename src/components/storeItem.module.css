@@ -1,7 +1,16 @@
+.grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 18rem);
+    justify-content: center;
+    gap: 1rem;
+}
+
 .card {
     width: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     padding: 1rem;
     border-radius: 1rem;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
@@ -63,7 +72,6 @@
     justify-content: center;
     align-items: center;
     border-radius: .5rem;
-    padding: 0;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     line-height: .5rem;
 }
@@ -86,7 +94,8 @@
 }
 
 .quantity {
-    padding: .5rem;
+    padding: .7rem .5rem .5rem .5rem;
+    font-size: 1.25rem;
     border-right: .1rem solid hsl(45, 77%, 50%);
     border-left: .1rem solid hsl(45, 77%, 50%);
 }
