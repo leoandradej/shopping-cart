@@ -10,7 +10,7 @@ const Navbar = () => {
     return (
         <header className={styles.header}>
             <nav className={styles.nav}>
-                <NavLink className={`${styles.logo} navLink`} to={"shopping-cart/"}>
+                <NavLink className={`${styles.logo} navLink`} to={"/"}>
                     <img src="/shopping-cart/images/logo.png" alt="logo" />
                     <span>FURNIST</span>
                 </NavLink>
