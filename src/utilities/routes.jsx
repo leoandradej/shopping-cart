@@ -11,15 +11,15 @@ const routes = [
         errorElement: <ErrorPage />,
     },
     {
-        path: "shopping-cart/store",
+        path: "/store",
         element: <Store />,
     },
     {
-        path: "shopping-cart/brand",
+        path: "/brand",
         element: <Brand />
     },
     {
-        path: "shopping-cart/cart",
+        path: "/cart",
         element: <Cart />,
     }
 ]
