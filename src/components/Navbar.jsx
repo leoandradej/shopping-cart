@@ -11,7 +11,7 @@ const Navbar = () => {
         <header className={styles.header}>
             <nav className={styles.nav}>
                 <NavLink className={`${styles.logo} navLink`} to={"shopping-cart/"}>
-                    <img src="/images/logo.png" alt="logo" />
+                    <img src="shopping-cart/images/logo.png" alt="logo" />
                     <span>FURNIST</span>
                 </NavLink>
                 <ul className={isActive ? `${styles.navList} ${styles.open}` : styles.navList}>
